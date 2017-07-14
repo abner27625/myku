@@ -1,6 +1,7 @@
 <template xmlns:v-bind="http://www.w3.org/1999/xhtml">
     <div class="loanDetailInfo">
-        <div class="header">
+        <div class="header" v-for="info in infoList">
+          <img class="banner"  v-bind:src="info.url">
           <img class="back" src="../assets/huankuan_top_arrow.png" @click="goto('/firstpage')"/>
         </div>
         <div v-for="info in infoList">
@@ -61,7 +62,7 @@
           switch (i) {
             case "1":
               temp = {
-//                url:"../assets/home_banner_enjoy.png",
+                url:require("../assets/pro_top_banner_enjoy.png"),
 //                url:a,
                 comprehensiveRate: "1.78",
                 applicablePeople: "有微粒贷授信额度且使用过该额度的人群",
@@ -74,7 +75,7 @@
               break;
             case "2":
               temp = {
-//                url:"../assets/pro_top_banner_gjj.png",
+                url:require("../assets/pro_top_banner_gjj.png"),
 //                url:b,
                 comprehensiveRate: "1.88",
                 applicablePeople: "授薪类人群中，能够提供公积金的高端企业员工",
@@ -84,7 +85,7 @@
               break;
             case "3":
               temp = {
-//                url:"../assets/home_banner_bus.png",
+                url:require("../assets/pro_top_banner_bus.png"),
 //                url:c,
                 comprehensiveRate: "1.88",
                 applicablePeople: "在申请地有无抵押或无质押车产的稳定客户",
@@ -95,7 +96,7 @@
               break;
             case "4":
               temp = {
-//                url:"../assets/home_banner_sx.png",
+                url:require("../assets/pro_top_banner_sx.png"),
 //                url:d,
                 comprehensiveRate: "1.88",
                 applicablePeople: "在申请地有传统型、分红型或万能型寿险的稳定客户",
@@ -106,7 +107,7 @@
             case "5":
               temp = {
 //                url:e,
-//                url:"../assets/home_banner_sb.png",
+                url:require("../assets/pro_top_banner_sb.png"),
                 comprehensiveRate: "1.88",
                 applicablePeople: "社保缴纳基数≥2000元，且供职于注册资金1000万以上或国企、事业单位",
                 applicationRequirement: ["23-55（不含）岁", "本地户籍连续缴纳9个月，外地户籍连续缴纳12个月", "工作居住地与申请地一致"]
@@ -116,7 +117,7 @@
             case "6":
               temp = {
 //                url:f,
-//                url:"../assets/home_banner_jy.png",
+                url:require("../assets/pro_top_banner_jy.png"),
                 comprehensiveRate: "1.98",
                 applicablePeople: "授薪类人群高端稳定客户",
                 applicationRequirement: ["23-55（不含）岁", "在现单位在编且连续工作满6个月及以上，外地户籍连续缴纳12个月", "事业机关单位、国企、上市公司、其他大中型企业人员网银发薪月收入3000元以上"]
@@ -158,7 +159,7 @@
   .header{
     width: 100%;
     height: 360px;
-    background-image: url("../assets/pro_top_banner_enjoy.png");
+    /*background-image: url("../assets/pro_top_banner_enjoy.png");*/
   }
   .back{
     float: left;
@@ -166,6 +167,13 @@
     height: 35px;
     margin-left: 40px;
     margin-top: 40px;
+    display: flex;
+    position: fixed;
+    top: 0;
+  }
+  .banner{
+    width: 100%;
+    height: 360px;
   }
   .smallicon{
     float: left;
@@ -184,6 +192,7 @@
     text-align: left;
   }
   h4{
+    font-weight: normal;
     text-align: left;
     padding: 30px 0 30px 80px;
     font-size: 30px;

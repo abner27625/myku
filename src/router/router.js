@@ -49,7 +49,11 @@ const route = new Router({
     },{
       path: '/loanDetailInfo', component: require('../page/loanDetailInfo.vue')
     },{
-      path: '/zhimaauthorized', component: require('../page/zhimaauthorized.vue')
+      path: '/zhimaauthorized', component: require('../page/authorized/zhimaauthorized.vue')
+    },{
+      path: '/normalauthorized', component: require('../page/authorized/normalauthorized.vue')
+    },{
+      path:'/login',component:require('../page/login.vue')
     }
   ]
 })

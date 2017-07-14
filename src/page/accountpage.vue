@@ -8,7 +8,7 @@
       </div>
 
       <ul class="icon-list">
-        <li class="icon" @click="goto('/loandetail')">
+        <li class="icon" @click="goto('/login')">
           <img src="../assets/me_icon_jiekuan.png" class="clear">
           <h4>我的借款</h4>
           <i></i>

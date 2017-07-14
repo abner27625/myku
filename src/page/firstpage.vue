@@ -40,8 +40,9 @@
           <img src="../assets/home_icon_ecs.png">
           <span>精英贷</span>
         </div>
-        <div class="product_item" id="product_item_other">
-          <span id="other">敬请期待</span>
+        <div class="product_item" @click="goto('/loanDetailInfo',7)">
+          <img src="../assets/home_icon_ecs.png">
+          <span>信楼贷</span>
         </div>
       </div>
       <hr>
@@ -117,6 +118,10 @@
           }else if(type === 6){
             that.$router.push({path,query:{
               type:"6"
+            }})
+          }else if(type === 7){
+            that.$router.push({path,query:{
+              type:"7"
             }})
           }
         }
