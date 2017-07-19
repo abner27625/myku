@@ -1,9 +1,22 @@
 <template >
     <div id="login_view">
-      <input placeholder="用户名" type="text" style="border:0px;" v-model="name">
+      <!--<input placeholder="用户名" type="text" style="border:0px;" v-model="name">
       <input placeholder="登录密码" type="password" maxlength="18" style="border:0px;" v-model="password">
 
-      <p class="login" @click="login">登录</p>
+      <p class="login" @click="login">登录</p>-->
+
+      <f7-list form>
+        <!-- Text Input -->
+        <f7-list-item>
+          <f7-label style="color: red;height: 100px">name</f7-label>
+          <f7-input type="text" placeholder="Name"/>
+        </f7-list-item>
+        <!-- Password -->
+        <f7-list-item>
+          <f7-label>password</f7-label>
+          <f7-input type="password" placeholder="Password"/>
+        </f7-list-item>
+      </f7-list>
     </div>
 </template>
 

@@ -35,7 +35,7 @@
             </div>
           </div>
         </div>
-      <p @click="click">立即申请</p>
+      <p @click="goto('/datapicker')">立即申请</p>
 
     </div>
 </template>

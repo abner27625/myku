@@ -1,4 +1,4 @@
-import App from '../App'
+//import App from '../App'
 import Vue from 'vue'
 import Router from 'vue-router'
 
@@ -54,6 +54,10 @@ const route = new Router({
       path: '/normalauthorized', component: require('../page/authorized/normalauthorized.vue')
     },{
       path:'/login',component:require('../page/login.vue')
+    },{
+      path:'/test',component:require('../page/test.vue')
+    },{
+      path:'/datapicker',component:require('../page/datapicker.vue')
     }
   ]
 })

@@ -27,7 +27,17 @@ module.exports = {
     autoOpenBrowser: true,
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
-    proxyTable: {},
+    proxyTable: {//专为跨域请求
+      '/test': //url输入的相对路径
+      {
+        target: 'http://www.kuaidi100.com/query?type=yuantong&postid=11111111111',
+        withCredentials:true,
+        changeOrigin: true,
+        pathRewrite: {
+          '^/test': ''
+        }
+      }
+    },
     // CSS Sourcemaps off by default because relative paths are "buggy"
     // with this option, according to the CSS-Loader README
     // (https://github.com/webpack/css-loader#sourcemaps)

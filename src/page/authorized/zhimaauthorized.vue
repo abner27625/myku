@@ -40,11 +40,9 @@
             })
           }
         },
-        methods: {
-          gotoAddress(path){
-            this.$router.push(path)
-          }
-        },
+        gotoAddress(path){
+          this.$router.push(path)
+        }
       }
     }
 </script>
